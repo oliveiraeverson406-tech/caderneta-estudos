@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caderneta de Estudos</title>
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABD0lEQVR4nGNgGGDAiC6gpSj1n9aWXrv/DG4vE70tR7eHCZsgPR3BOBCWIwMWQgouXr1EkQX62np45ZnwSVJqOTFm4HUAPcCoAwgmQnRw9+ohotQpa9sRpW7ohQCxPqOZA0ajYNhFAckOIAakLljIwMCwEM4X9jJleLvtNFa1eGtDcuoCp9JknHLYHEHVRIjL8n3dcxkYGCAhQTMHELIclyOo4gBClqPzkR1Bk3IA3WIYwOZQqjsAPcjxWU51B+DyOT5Al1yAL2tSxQHIPodZhk4jA+TygGCznJTCCJ9PsVlOlANIBdgKG1yWMzBAowC5r0YpwFXmYxO/dv8ZI4rF9OwhwTzNhE2QXpYzMDAwAABMLWsmw7OhWQAAAABJRU5ErkJggg==">
+<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAkUlEQVR4nGNkYGBg0FKU+s9AJmCiRDMDAwMDCzLn4tVLRGnS19ZDuIAS2zFcgAzuXj2EIaasbYchRrELBt4AnGGA7l+n0mSGfd12DE6lyaS7AKJ5LgMDAwPDvu65DMJepsQbgG4juiFEuQBmOzZDCRqArhkdEB0LMFth9NttpxkYGBgYGInNTMgBB9NMkgG4AABq+SWNYUcRMAAAAABJRU5ErkJggg==">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+<link rel="manifest" href="manifest.json">
+<style>
+  :root{
+    --paper: #FBF6EC;
+    --paper-dark: #F0E7D4;
+    --ink: #2A211A;
+    --accent: #B3312C;
+    --accent-dark: #8F2521;
+    --ok-green: #3D6B4F;
+    --line: #D8CBAE;
+    --gold: #C9A227;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    padding-bottom: 40px;
+  }
+  header{
+    background: #1A1512;
+    color: var(--paper);
+    padding: 22px 16px 26px;
+  }
+  header h1{
+    margin:0;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 24px;
+  }
+  header p{
+    margin: 6px 0 0;
+    font-size: 13px;
+    opacity: 0.85;
+  }
+
+  .month-nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    margin: 18px 16px 0;
+  }
+  .month-nav button{
+    border:none;
+    background: var(--paper-dark);
+    color: var(--ink);
+    font-size:18px;
+    font-weight:700;
+    border-radius:8px;
+    padding:8px 14px;
+  }
+  .month-title{
+    text-align:center;
+    flex:1;
+  }
+  .month-title .mes{
+    font-family: Georgia, serif;
+    font-size: 19px;
+    font-weight:700;
+  }
+  .month-title .materia{
+    font-size:13px;
+    color:#6b5f4d;
+  }
+
+  .materia-form{
+    margin: 12px 16px 0;
+    display:flex;
+    gap:8px;
+  }
+  .materia-form input{
+    flex:1;
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:9px 10px;
+    font-size:14px;
+    background:#fff;
+  }
+  .materia-form button{
+    border:none;
+    border-radius:6px;
+    background: var(--accent);
+    color:#fff;
+    font-weight:600;
+    padding:9px 14px;
+    font-size:14px;
+  }
+
+  .summary{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 16px 16px 4px;
+  }
+  .card{
+    background:#fff;
+    border: 1px dashed var(--line);
+    border-radius: 8px;
+    padding: 12px;
+    text-align:center;
+  }
+  .card .num{
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight:700;
+    color: var(--accent-dark);
+  }
+  .card .lbl{
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color:#6b5f4d;
+    margin-top:2px;
+  }
+  .card.ok .num{ color: var(--ok-green); }
+
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap:8px;
+    margin: 16px 16px 0;
+  }
+  .dia{
+    aspect-ratio: 1;
+    background:#fff;
+    border: 2px solid var(--line);
+    border-radius: 8px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding: 2px;
+    text-align:center;
+    overflow:hidden;
+  }
+  .dia .num-dia{
+    font-size:16px;
+    font-weight:600;
+    color: var(--ink);
+  }
+  .dia .nota{
+    font-size:9px;
+    line-height:1.1;
+    color: var(--ink);
+    max-height: 22px;
+    overflow:hidden;
+    word-break: break-word;
+  }
+  .dia.futuro{
+    opacity:0.4;
+  }
+  .dia.estudou{
+    background: var(--ok-green);
+    border-color: var(--ok-green);
+  }
+  .dia.estudou .num-dia,
+  .dia.estudou .nota{
+    color:#fff;
+  }
+  .dia.hoje{
+    border-color: var(--accent);
+  }
+
+  .backup{
+    margin: 20px 16px 4px;
+    background:#fff;
+    border-radius: 10px;
+    padding: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  .backup h2{
+    margin:0 0 10px;
+    font-size:15px;
+    color: var(--accent-dark);
+  }
+  .backup .row{
+    display:flex;
+    gap:8px;
+  }
+  .backup button, .backup label{
+    flex:1;
+    text-align:center;
+    padding:10px;
+    border:none;
+    border-radius:6px;
+    font-size:13px;
+    font-weight:600;
+    cursor:pointer;
+  }
+  .btn-backup{
+    background: var(--gold);
+    color: var(--ink);
+  }
+  .btn-restaurar{
+    background: var(--paper-dark);
+    color: var(--ink);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .toast{
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform: translateX(-50%);
+    background: var(--ok-green);
+    color:#fff;
+    padding:10px 18px;
+    border-radius: 20px;
+    font-size:13px;
+    font-weight:600;
+    opacity:0;
+    pointer-events:none;
+    transition: opacity 0.3s;
+  }
+  .toast.show{ opacity:1; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📓 Caderneta de Estudos</h1>
+  <p>Um X por dia estudado</p>
+</header>
+
+<div class="month-nav">
+  <button onclick="mudarMes(-1)">◀</button>
+  <div class="month-title">
+    <div class="mes" id="tituloMes"></div>
+    <div class="materia" id="tituloMateria"></div>
+  </div>
+  <button onclick="mudarMes(1)">▶</button>
+</div>
+
+<div class="materia-form">
+  <input type="text" id="inputMateria" placeholder="Matéria do mês (ex: HTML)">
+  <button onclick="salvarMateria()">Salvar</button>
+</div>
+
+<div class="summary">
+  <div class="card ok">
+    <div class="num" id="totEstudados">0</div>
+    <div class="lbl">Dias estudados</div>
+  </div>
+  <div class="card">
+    <div class="num" id="totDias">0</div>
+    <div class="lbl">Dias no mês</div>
+  </div>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<div class="backup">
+  <h2>💾 Backup</h2>
+  <div class="row">
+    <button class="btn-backup" onclick="baixarBackup()">📤 Exportar backup</button>
+    <label class="btn-restaurar" for="arquivoBackup">📥 Importar backup</label>
+    <input type="file" id="arquivoBackup" accept=".json" style="display:none" onchange="restaurarBackup(event)">
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  const NOMES_MES = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+
+  let dados = JSON.parse(localStorage.getItem('caderneta_estudos') || '{}');
+  // dados = { "2026-08": { materia: "HTML", dias: {1:true, 2:false, ...} } }
+
+  const hoje = new Date();
+  let anoAtual = hoje.getFullYear();
+  let mesAtual = hoje.getMonth(); // 0-11
+
+  function chaveMes(ano, mes){
+    return ano + '-' + String(mes + 1).padStart(2, '0');
+  }
+
+  function getMesDados(ano, mes){
+    const chave = chaveMes(ano, mes);
+    if(!dados[chave]){
+      dados[chave] = { materia: '', dias: {} };
+    }
+    return dados[chave];
+  }
+
+  function salvar(){
+    localStorage.setItem('caderneta_estudos', JSON.stringify(dados));
+    mostrarToast('Salvo ✓');
+    render();
+  }
+
+  function mostrarToast(msg){
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(window._toastTimeout);
+    window._toastTimeout = setTimeout(() => t.classList.remove('show'), 1500);
+  }
+
+  function mudarMes(delta){
+    mesAtual += delta;
+    if(mesAtual > 11){ mesAtual = 0; anoAtual++; }
+    if(mesAtual < 0){ mesAtual = 11; anoAtual--; }
+    render();
+  }
+
+  function salvarMateria(){
+    const valor = document.getElementById('inputMateria').value.trim();
+    const mesDados = getMesDados(anoAtual, mesAtual);
+    mesDados.materia = valor;
+    salvar();
+  }
+
+  function editarDia(dia){
+    const mesDados = getMesDados(anoAtual, mesAtual);
+    const notaAtual = mesDados.dias[dia] || '';
+    const novaNota = prompt('O que você estudou no dia ' + dia + '?', notaAtual);
+    if(novaNota === null) return;
+    mesDados.dias[dia] = novaNota.trim();
+    salvar();
+  }
+
+  function baixarBackup(){
+    const blob = new Blob([JSON.stringify(dados, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    const dataStr = new Date().toISOString().slice(0,10);
+    a.href = url;
+    a.download = `backup-caderneta-${dataStr}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    mostrarToast('Backup baixado ✓');
+  }
+
+  function restaurarBackup(event){
+    const arquivo = event.target.files[0];
+    if(!arquivo) return;
+    const leitor = new FileReader();
+    leitor.onload = function(e){
+      try{
+        const novosDados = JSON.parse(e.target.result);
+        if(typeof novosDados !== 'object') throw new Error('formato inválido');
+        if(!confirm('Isso vai substituir os dados atuais pelos dados do backup. Continuar?')) return;
+        dados = novosDados;
+        salvar();
+        mostrarToast('Backup restaurado ✓');
+      }catch(err){
+        alert('Arquivo de backup inválido.');
+      }
+      event.target.value = '';
+    };
+    leitor.readAsText(arquivo);
+  }
+
+  function render(){
+    const mesDados = getMesDados(anoAtual, mesAtual);
+    const ehMesAtual = (anoAtual === hoje.getFullYear() && mesAtual === hoje.getMonth());
+
+    // Define HTML como matéria padrão do mês atual, se ainda não tiver sido definida
+    if(ehMesAtual && !mesDados.materia){
+      mesDados.materia = 'HTML';
+    }
+
+    document.getElementById('tituloMes').textContent = NOMES_MES[mesAtual] + ' de ' + anoAtual;
+    document.getElementById('tituloMateria').textContent = mesDados.materia ? 'Estudando: ' + mesDados.materia : 'Nenhuma matéria definida';
+    document.getElementById('inputMateria').value = mesDados.materia || '';
+
+    const diasNoMes = new Date(anoAtual, mesAtual + 1, 0).getDate();
+    const grid = document.getElementById('grid');
+    grid.innerHTML = '';
+
+    let totEstudados = 0;
+
+    for(let dia = 1; dia <= diasNoMes; dia++){
+      const nota = mesDados.dias[dia] || '';
+      const estudou = nota.length > 0;
+      if(estudou) totEstudados++;
+      const futuro = ehMesAtual && dia > hoje.getDate();
+      const ehHoje = ehMesAtual && dia === hoje.getDate();
+
+      const el = document.createElement('div');
+      el.className = 'dia' + (estudou ? ' estudou' : '') + (futuro ? ' futuro' : '') + (ehHoje ? ' hoje' : '');
+      el.innerHTML = '<span class="num-dia">' + dia + '</span>' + (nota ? '<span class="nota">' + nota + '</span>' : '');
+      el.onclick = () => editarDia(dia);
+      grid.appendChild(el);
+    }
+
+    document.getElementById('totEstudados').textContent = totEstudados;
+    document.getElementById('totDias').textContent = diasNoMes;
+  }
+
+  render();
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js');
+  }
+</script>
+</body>
+</html>

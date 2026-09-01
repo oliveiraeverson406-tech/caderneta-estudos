@@ -1,12 +1,20 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Caderneta de Estudos</title>
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABD0lEQVR4nGNgGGDAiC6gpSj1n9aWXrv/DG4vE70tR7eHCZsgPR3BOBCWIwMWQgouXr1EkQX62np45ZnwSVJqOTFm4HUAPcCoAwgmQnRw9+ohotQpa9sRpW7ohQCxPqOZA0ajYNhFAckOIAakLljIwMCwEM4X9jJleLvtNFa1eGtDcuoCp9JknHLYHEHVRIjL8n3dcxkYGCAhQTMHELIclyOo4gBClqPzkR1Bk3IA3WIYwOZQqjsAPcjxWU51B+DyOT5Al1yAL2tSxQHIPodZhk4jA+TygGCznJTCCJ9PsVlOlANIBdgKG1yWMzBAowC5r0YpwFXmYxO/dv8ZI4rF9OwhwTzNhE2QXpYzMDAwAABMLWsmw7OhWQAAAABJRU5ErkJggg==">
+<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAkUlEQVR4nGNkYGBg0FKU+s9AJmCiRDMDAwMDCzLn4tVLRGnS19ZDuIAS2zFcgAzuXj2EIaasbYchRrELBt4AnGGA7l+n0mSGfd12DE6lyaS7AKJ5LgMDAwPDvu65DMJepsQbgG4juiFEuQBmOzZDCRqArhkdEB0LMFth9NttpxkYGBgYGInNTMgBB9NMkgG4AABq+SWNYUcRMAAAAABJRU5ErkJggg==">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
 <link rel="manifest" href="manifest.json">
 <style>
   :root{
@@ -403,5 +411,8 @@
 
   render();
 </script>
+</body>
+</html>
+
 </body>
 </html>
